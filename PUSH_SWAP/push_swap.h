@@ -47,5 +47,10 @@ void	rrb(t_all *all);
 void	if_three(t_all *all);
 void	hi_low(t_all *all);
 void	stack_rank(t_all *all);
+void	ss(t_all *all);
+void	rr(t_all *all);
+void	rrr(t_all *all);
+void	check_sheet(t_all *all, char *line);
+void	err();
 
 #endif

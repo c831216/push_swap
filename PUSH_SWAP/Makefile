@@ -6,13 +6,15 @@ SRC =	./checker.c\
 		./functions.c\
 		./functions1.c\
 		./functions2.c\
-		./functions3.c
+		./functions3.c\
+		./functions4.c
 
 SRC2 =	./push_swap.c\
 		./functions.c\
 		./functions1.c\
 		./functions2.c\
-		./functions3.c
+		./functions3.c\
+		./functions4.c
 
 HEADERS = ./*.h
 LIBFT = ./libft

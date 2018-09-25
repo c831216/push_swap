@@ -41,3 +41,27 @@ void stack_rank(t_all *all)
     i++;
   }
 }
+/* 2 */
+void  ss(t_all *all)
+{
+  sa(all);
+  sb(all);
+}
+/* 3 */
+void rr(t_all *all)
+{
+  ra(all);
+	rb(all);
+}
+/* 4 */
+void  rrr(t_all *all)
+{
+	rra(all);
+  rrb(all);
+}
+/* 5 */
+// void err()
+// {
+//   ft_putstr_fd("Error\n", 2);
+//   exit (0);
+// }
