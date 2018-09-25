@@ -28,3 +28,18 @@ void  check_sheet(t_all *all, char *line)
 			// 	err();
 			all->i = 0;
 }
+
+void	ko_check(t_all *all)
+{
+	if (check_order(all))
+		ft_putstr("OK\n");
+	else
+		ft_putstr("KO\n");
+}
+
+void	store_dup_make(t_all *all, int ac, char **av)
+{
+	store_2d_array(ac, av, all);
+	dup_check(all);
+	make_int_array(all);
+}

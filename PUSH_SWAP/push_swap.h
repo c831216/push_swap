@@ -52,5 +52,7 @@ void	rr(t_all *all);
 void	rrr(t_all *all);
 void	check_sheet(t_all *all, char *line);
 void	err();
+void	ko_check(t_all *all);
+void	store_dup_make(t_all *all, int ac, char **av);
 
 #endif

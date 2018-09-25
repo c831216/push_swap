@@ -60,8 +60,8 @@ void  rrr(t_all *all)
   rrb(all);
 }
 /* 5 */
-// void err()
-// {
-//   ft_putstr_fd("Error\n", 2);
-//   exit (0);
-// }
+void err()
+{
+  ft_putstr_fd("Error\n", 2);
+  exit (0);
+}
