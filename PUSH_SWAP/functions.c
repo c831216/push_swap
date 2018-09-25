@@ -30,23 +30,23 @@ void store_2d_array(int ac, char **av, t_all *all) /*1 This is going to store my
 /* 2 */
 void dup_check(t_all *all) /*2 I now need to take my stored stack and check for duplicates*/
 {
-  all->j = 0;
-  all->b = 0;
+  all->j = 0;/*using j for y-axis*/
+  all->b = 0;/*using b for x-axis*/
   while (all->j < all->m)
   {
-    all->i = 0;
+    all->i = 0;/*x-axis so going though the string*/
     all->count = 0;
     all->tmp[0] = all->stack_a[all->j];
     while (all->i < all->m)
     {
-      if (!ft_strcmp(all->stack_a[all->i], all->tmp[0]))
+      if (!ft_strcmp(all->stack_a[all->i], all->tmp[0]))/*only if found in string do this*/
       {
         all->b = 0;
         while (all->stack_a[all->i][all->b])
         {
           if (!ft_isdigit(all->stack_a[all->i][all->b]))
           {
-            ft_putstr_fd("Error\n", 2);
+            ft_putstr_fd("Error2\n", 2);
             exit(0);
           }
           all->b++;
@@ -54,7 +54,7 @@ void dup_check(t_all *all) /*2 I now need to take my stored stack and check for 
         all->count++;
         if (all->count > 1)
         {
-          ft_putstr("Error\n");
+          ft_putstr_fd("Error3\n", 2);
           exit(0);
         }
       }

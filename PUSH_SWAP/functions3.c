@@ -62,6 +62,6 @@ void  rrr(t_all *all)
 /* 5 */
 void err()
 {
-  ft_putstr_fd("Error\n", 2);
+  ft_putstr_fd("Error1\n", 2);
   exit (0);
 }

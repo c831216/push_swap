@@ -27,20 +27,27 @@ int			main(int ac, char **av)
 
 	all = (t_all *)malloc(sizeof(t_all));
 	store_dup_make(all, ac, av);
-	if (ac > 2)
+	if (ac >= 2)
 	{
-		while (get_next_line(0, &l))
+		if (all->a_counter == 1)
+			return (0);
+		while (get_next_line(0, &l) != 0)
 		{
-			if ((cha(l, "sa")) || (cha(l, "sb")) || (cha(l, "ss")))
+			if ((cha(l, "sa")) || (cha(l, "sb")) || (cha(l, "ss")) ||
+				(cha(l, "pa")) || (cha(l, "pb")) || (cha(l, "ra")) ||
+				(cha(l, "rb")) || (cha(l, "rr")) || (cha(l, "rra")) ||
+				(cha(l, "rrb")) || (cha(l, "rrr")))
+			{
 				check_sheet(all, l);
-			else if ((cha(l, "pa")) || (cha(l, "pb")) || (cha(l, "ra")))
-				check_sheet(all, l);
-			else if ((cha(l, "rb")) || (cha(l, "rr")) || (cha(l, "rra")))
-				check_sheet(all, l);
-			else if ((cha(l, "rrb")) || (cha(l, "rrr")))
-				check_sheet(all, l);
+				print_stacks(all);
+			}
 			else
+			{
+				print_stacks(all);
+				printf("\nb count %d\n", all->b_counter);
 				err();
+			}
+			
 		}
 		free(l);
 		ko_check(all);
