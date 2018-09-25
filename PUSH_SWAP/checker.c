@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
+/*ulti test*/
 int			main(int ac, char **av)
 {
 	t_all	*all;
