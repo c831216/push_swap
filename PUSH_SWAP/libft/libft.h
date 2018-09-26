@@ -20,7 +20,14 @@
 #	include <fcntl.h>
 #	include "libft.h"
 
-#	define BUFF_SIZE 1
+#	define BUFF_SIZE 32
+
+typedef struct		s_gnl
+{
+	int				fd;
+	struct s_gnl	*next;
+	char			*data;
+}					t_gnl;
 
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t n);
@@ -78,6 +85,6 @@ char				*ft_itoa(int n);
 void				*ft_memchr(const void *str, int c, size_t n);
 int					get_next_line(const int fd, char **line);
 char				**ft_strnew_double(size_t x, size_t y);
-// int					ft_strchr_count(const char *s, const char *c);
+int					get_next_line(const int fd, char **line);
 
-#	endif
+#endif

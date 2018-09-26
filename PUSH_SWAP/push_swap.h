@@ -9,8 +9,6 @@
 
 typedef struct	s_all
 {
-	char		**input;
-	int			*stack_b;
 	char		**stack;
 	char		**stack_a;
 	char 		**tmp;
@@ -30,33 +28,34 @@ typedef struct	s_all
 	int 		high;
 }						t_all;
 
-int		error_free(int ac, char **av);
-void	store_2d_array(int ac, char **av, t_all *all);
-void	dup_check(t_all *all);
-void	make_int_array(t_all *all);
-void	print_stacks(t_all *all);
-int		check_order(t_all *all);
-void	sa(t_all *all);
-void	sb(t_all *all);
-void	pa(t_all *all);
-void	pb(t_all *all);
-void	ra(t_all *all);
-void	rb(t_all *all);
-void	rra(t_all *all);
-void	rrb(t_all *all);
-void	if_three(t_all *all);
-void	hi_low(t_all *all);
-void	stack_rank(t_all *all);
-void	ss(t_all *all);
-void	rr(t_all *all);
-void	rrr(t_all *all);
-void	check_sheet(t_all *all, char *line);
-void	err();
-void	ko_check(t_all *all);
-void	store_dup_make(t_all *all, int ac, char **av);
-void	if_2(t_all *all);
-void	if_3(t_all *all);
-void	if_4(t_all *all);
-void	if_5(t_all *all);
-
+int				error_free(int ac, char **av);
+void			store_2d_array(int ac, char **av, t_all *all);
+void			dup_check(t_all *all);
+void			make_int_array(t_all *all);
+void			print_stacks(t_all *all);
+int				check_order(t_all *all);
+void			sa(t_all *all);
+void			sb(t_all *all);
+void			pa(t_all *all);
+void			pb(t_all *all);
+void			ra(t_all *all);
+void			rb(t_all *all);
+void			rra(t_all *all);
+void			rrb(t_all *all);
+void			if_three(t_all *all);
+void			hi_low(t_all *all);
+void			stack_rank(t_all *all);
+void			ss(t_all *all);
+void			rr(t_all *all);
+void			rrr(t_all *all);
+void			check_sheet(t_all *all, char *line);
+void			err();
+void			ko_check(t_all *all);
+void			store_dup_make(t_all *all, int ac, char **av);
+void			if_2(t_all *all);
+void			if_3(t_all *all);
+void			if_4(t_all *all);
+void			if_5(t_all *all);
+void			ft_freearray_int(int ***array);
+void			ft_freearray_char(char ***array);
 #endif

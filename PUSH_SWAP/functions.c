@@ -1,5 +1,42 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   functions.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: csolomo <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/09/26 10:07:02 by csolomo           #+#    #+#             */
+/*   Updated: 2018/09/26 10:07:07 by csolomo          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 /* 1 */
+
+void	ft_freearray_int(int ***array)
+{
+	int i;
+
+	i = 0;
+	while ((*array)[i] != NULL)
+	{
+	free((*array)[i]);
+		i++;
+	}
+	free(*array);
+}
+void	ft_freearray_char(char ***array)
+{
+	int i;
+
+	i = 0;
+	while ((*array)[i] != NULL)
+	{
+	free((*array)[i]);
+		i++;
+	}
+	free(*array);
+}
 void store_2d_array(int ac, char **av, t_all *all) /*1 This is going to store my input into a 2d array */
 {
   all->stack = (char **)malloc(sizeof(char *) * (ac));
@@ -17,6 +54,8 @@ void store_2d_array(int ac, char **av, t_all *all) /*1 This is going to store my
   while (all->stack[all->i])
   {
     all->k = 0;
+    //if (all->tmp)
+      //ft_freearray_char(&all->tmp);
     all->tmp = ft_strsplit(all->stack[all->i], ' ');
     while (all->tmp[all->k])
     {
@@ -24,8 +63,11 @@ void store_2d_array(int ac, char **av, t_all *all) /*1 This is going to store my
       all->m++;
       all->k++;
     }
+     //ft_freearray_char(&all->tmp);
     all->i++;
   }
+  //free(all->stack);
+  //free(all->stack_a);
 }
 /* 2 */
 void dup_check(t_all *all) /*2 I now need to take my stored stack and check for duplicates*/
@@ -63,6 +105,7 @@ void dup_check(t_all *all) /*2 I now need to take my stored stack and check for 
       }
       all->i++;
     }
+    //ft_freearray_char(&all->tmp);
     all->j++;
   }
 }

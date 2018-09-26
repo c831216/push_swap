@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   functions3.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: csolomo <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/09/26 10:07:34 by csolomo           #+#    #+#             */
+/*   Updated: 2018/09/26 10:07:37 by csolomo          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 /* 1 */
 void stack_rank(t_all *all)
@@ -60,8 +72,15 @@ void  rrr(t_all *all)
   rrb(all);
 }
 /* 5 */
-void err()
+void err(t_all *all)
 {
-  ft_putstr_fd("Error1\n", 2);
-  exit (0);
+  (void)all;
+    ft_putstr_fd("Error1\n", 2);
+		free(all->int_stack_a);
+		free(all->int_stack_b);
+		ft_freearray_char(&all->stack_a);
+		//ft_freearray((void ***)&all->stack);
+		//ft_freearray((void ***)&all->tmp);
+		//free(all);
+    exit (0);
 }

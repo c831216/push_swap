@@ -37,20 +37,18 @@ int			main(int ac, char **av)
 				(cha(l, "pa")) || (cha(l, "pb")) || (cha(l, "ra")) ||
 				(cha(l, "rb")) || (cha(l, "rr")) || (cha(l, "rra")) ||
 				(cha(l, "rrb")) || (cha(l, "rrr")))
-			{
 				check_sheet(all, l);
-				print_stacks(all);
-			}
 			else
-			{
-				print_stacks(all);
-				printf("\nb count %d\n", all->b_counter);
-				err();
-			}
-			
+				err(l);
+			ft_strdel(&l);
 		}
-		free(l);
 		ko_check(all);
+		ft_freearray_char(&all->stack);
+		ft_freearray_char(&all->stack_a);
+		free(all->int_stack_a);
+		free(all->int_stack_b);
+		ft_freearray_char(&all->tmp);
+		free(all);
 	}
 	return (0);
 }
